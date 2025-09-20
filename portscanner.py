@@ -3,7 +3,7 @@ from IPy import IP
 def scan(target):
     converted_ip=ipaddr(target)
     print("\n" +"[-_-] Scanning Target " + str(target))
-    for port in range(1, 500):
+    for port in range(int(input("Enter Starting range of port no. :")),int(input("Enter Ending range of port no. :"))):
         port_scanner(converted_ip, port)
 def ipaddr(ip):
     try:
